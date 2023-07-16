@@ -1,0 +1,642 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, .editor button {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/** end reset css**/
+body {
+	max-width: 1140px;
+	margin:auto;
+	font-family: 'Work Sans' ;
+	font-size: 14px;
+}
+header {
+	display: flex;
+	justify-content: space-between;
+	margin: 50px 0
+}
+
+button:hover {
+	cursor: pointer;
+}
+.nav_header a {
+	text-decoration: none;
+	color: black;
+}
+section {
+	margin: 50px 0
+}
+
+h1{
+	display: flex;
+	flex-direction: column;
+	font-family: 'Syne';
+	font-size: 22px;
+	font-weight: 800;
+	color: #B1663C
+}
+
+h1 > span {
+	font-family: 'Work Sans';
+	font-size:10px;
+	letter-spacing: 0.1em;
+;
+}
+
+h2, #filtres button {
+	font-family: 'Syne';
+	font-weight: 700;
+	font-size: 30px;
+	color: #1D6154
+}
+nav ul {
+	display: flex;
+	align-items: center;
+	list-style-type: none;
+
+}
+nav li {
+	padding: 0 10px;
+	font-size: 1.2em;
+}
+
+li:hover, li a:hover {
+	color: #B1663C;
+}
+#introduction {
+	display: flex;
+	align-items: center;
+}
+#introduction figure {
+	flex: 1
+}
+#introduction img {
+	display: block;
+	margin: auto;
+	width: 80%;
+}
+
+#introduction article {
+	flex: 1
+}
+#introduction h2 {
+	margin-bottom: 1em;
+}
+
+#introduction p {
+	margin-bottom: 0.5em;
+}
+#portfolio h2 {
+	text-align: center;
+	margin-bottom: 1em;
+}
+
+#filtres {
+	justify-content: center;
+	margin-bottom: 4em;
+	margin-top: 4em;
+}
+
+#filtres button {
+	background-color: white;
+	border-color: #1D6154;
+	border-radius: 20px;
+	font-size: 1.1em;
+	padding: 0.3em;
+	min-width: 6em;
+	margin-left: -5px;
+	margin-right: -5px;
+}
+
+#filtres button:hover {
+	background-color: #94d1c7;
+}
+
+#filtres button:active, #filtres button.active{
+	color: white;
+	background-color: #1D6154;
+}
+
+.gallery, .modale_gallery {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-column-gap: 20px;
+	grid-row-gap: 20px;
+}
+
+.gallery img {
+	width: 100%;
+	object-fit: cover;
+	height: 500px;
+
+}
+#contact, #login {
+	width: 50%;
+	margin: auto;
+}
+#contact > *, #login > * {
+	text-align: center;
+
+}
+#contact h2, #login h2 {
+	margin-bottom: 20px;
+}
+#contact form, #login form, #form_photo {
+	text-align: left;
+	margin-top:30px;
+	display: flex;
+	flex-direction: column;
+}
+
+#contact input, #login input, #form_photo select, #form_photo option, #titre_form {
+	height: 50px;
+	font-size: 1.2em;
+	border: none;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+#contact label, #login label, #form_photo label {
+	margin: 2em 0 1em 0;
+}
+#contact textarea {
+	border: none;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+
+#login a {
+	color: black;
+	font-family: 'Syne';
+}
+
+input[type="submit"]{
+	font-family: 'Syne';
+	font-weight: 700;
+	color: white;
+	background-color: #1D6154;
+	margin : 2em auto ;
+	width: 180px;
+	text-align: center;
+	border-radius: 60px ;
+	cursor: pointer;
+}
+
+footer nav ul {
+	display: flex;
+	justify-content: flex-end;
+	margin: 2em
+}
+
+.footer_login {
+	margin-top: 200px;
+}
+
+.bandeau {
+	position: relative;
+	top: 0px;
+	left: 0px;
+	margin-left: -150px;
+	margin-right: -150px;
+}
+
+.editor {
+	color: white;
+	height: 59px;
+	background-color: black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+	
+}
+
+.editor button {
+	color: black;
+	background-color: white;
+	border-radius: 20px;
+	padding: 5px;
+	min-width: 216px;
+	height: 38px;
+}
+
+#main_photo {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	
+}
+
+#main_photo button {
+	width: 80%;
+	left: 10%;
+}
+
+#main_photo button, #mod_gallery button, #bio button {
+	display: flex;
+	position: relative;
+	left: 60px;
+	height: 23px;
+	margin-top: 10px;
+	background-color: white;
+	border: none;
+	font-family: 'Work Sans';
+	font-size: 15px;
+	font-weight: 300;
+	gap: 5px;
+}
+
+#bio {
+	position: relative;
+}
+
+#bio button {
+	position: absolute;
+	top: -50px;
+	left: 0px;
+}
+
+#mod_gallery {
+	display: flex;
+	width: 195px;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+#mod_gallery button {
+	position: absolute;
+	left: 200px;
+	top: -5px;
+	
+}
+
+.modale_projets {
+	background-color: rgba(0, 0, 0, 0.5);
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.window_modale {
+	background-color: white;
+	border-radius: 10px;
+	width: 700px;
+	height: 700px;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+}
+
+.window_modale h2 {
+	color: black;
+	font: inherit;
+	font-size: 2em;
+	margin-top: 10px;
+}
+
+.window_modale button {
+	align-self: flex-end;
+	width: 2em;
+	height: 2em;
+	border: none;
+	background-color: white;
+	font-size: 1.2em;
+}
+
+.modale_gallery {
+	width: 70%;
+	
+	display: flex;
+	
+	gap: 10px;
+	margin-bottom: 50px;
+	flex-wrap: wrap;
+	overflow: auto;
+	align-self: center;
+}
+
+.modale_gallery figure {
+	
+	width: 95px;
+	height: 145px; /* 30% */
+	min-height: none; /* 30% */
+	min-width: none;
+	position: relative;
+	
+}
+
+.modale_gallery figure button {
+	color: white;
+	
+	font-size: 70%;
+	background-color: rgba(0, 0, 0, 0.8);
+	border-radius: 4px;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+}
+
+.modale_gallery img {
+	object-fit: cover;
+	width: 100%;
+	
+	height: 126px;
+}
+
+.btn_editor, .btn_editor2 {
+	display: flex;
+	flex-direction: column;
+	align-self: center;
+	border-top: solid 2px #B3B3B3;
+	padding-top: 15px;
+	width: 500px;
+	
+}
+
+.btn_editor2 {
+	width: 100%;
+	margin-top: 50px;
+}
+
+#add_photo {
+	background-color: #1D6154;
+	width: 250px;
+	height: 35px;
+	font-family: 'Syne';
+	color: white;
+	border-radius: 20px;
+	margin-bottom: 10px;
+	font-size: 1em;
+	align-self: center;
+}
+
+#valider_photo {
+	height: 36px;
+	width: 237px;
+	border: none;
+	font-size: 1.2em;
+	
+}
+
+#form_photo:invalid input[type="submit"] {
+	background-color: #A7A7A7;
+}
+
+#delete_gallery {
+	color: red;
+	font-family: 'Work Sans';
+	font-size: 1em;
+	width: 250px;
+	height: 35px;
+	align-self: center;
+}
+
+#form_photo {
+	width: 500px;
+	align-self: center;
+	margin-bottom: 50px;
+	height: 600px;
+	
+}
+
+#form_photo select, #titre_form {
+	background-color: white;
+	font-family: 'Work Sans';
+	font-size: 15px;
+	
+	
+}
+
+#titre_form, #categorie_form {
+	height: 50px;
+}
+
+#drag_image {
+	background-color: #e8f1f6;
+	border-radius: 4px;
+	height: 220px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	align-content: space-around;
+	
+	position: relative;
+}
+
+#apercuPhotoDiv {
+	position: absolute;
+	background-color: #e8f1f6;
+	width: 100%;
+	height: 220px;
+	
+	
+	
+}
+
+#apercuPhoto {
+	object-fit: cover;
+	height: 100%;
+	max-width: 100%;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	
+	
+	
+}
+
+#drag_image .fa-image {
+	font-size: 80px;
+	color: #b9c5cc;
+
+}
+
+#photo_form {
+	display: none;
+}
+
+.custom_button {
+	border-radius: 30px;
+	background-color: #cbd6dc;
+	height: auto;
+	color: #306685;
+	width: auto;
+	padding: 15px 50px;
+	font: inherit;
+	font-size: 20px;
+	top: 92px;
+	font-size: 20px;
+	color: #306685;
+	cursor: pointer;
+	
+}
+
+#retour {
+	align-self: flex-start;
+	position: absolute;
+}
+
+@media all and (max-width: 1460px){
+	.bandeau {
+		width: 100%;
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+}
+
+@media all and (max-width: 1139px){
+
+	.bandeau {
+		width: 100%;
+		align-self: center;
+		margin: 0px;
+	}
+	
+	header {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	#introduction {
+		display: flex;
+		flex-direction: column;
+	}
+
+	header, #introduction article, .gallery {
+		padding-left: 2%;
+		padding-right: 2%;
+	}
+
+	.gallery {
+		max-width: 96%;
+		grid-template-columns: 1fr 1fr;
+		
+
+	}
+
+	
+
+	#filtres {
+		width: 100%;
+		display: flex;
+		align-self: center;
+		flex-wrap: wrap;
+		row-gap: 10px;
+	}
+
+	#contact, #login {
+		width: 80%;
+		max-width: 500px;
+	}
+
+	#main_photo button {
+		left: 10%;
+	}
+
+	#bio button {
+		top: 0px;
+		left: 320px;
+	}
+}
+
+
+
+@media all and (max-width: 700px){
+	.window_modale {
+		width: 100%;
+	}
+
+	.btn_editor, .btn_editor2 {
+		
+		width: 100%;
+		max-width: 500px;
+	}
+
+	.modale_gallery {
+		width: 100%;
+		max-width: 500px;
+	}
+
+	#form_photo {
+		width: 100%;
+	}
+}
+
+@media all and (max-width: 600px){
+
+	.gallery {
+		grid-template-columns: 1fr;
+	}
+
+	.editor {
+		gap: 5px;
+	}
+
+	.editor p {
+		width: 50px;
+	}
+}
+
+@media all and (max-width: 420px){
+	#bio button {
+		top: 25px;
+		left: 40px;
+	}
+}
+
+@media all and (max-width: 400px){
+	#mod_gallery button {
+		left: 50px;
+		top: 30px;
+	}
+}
